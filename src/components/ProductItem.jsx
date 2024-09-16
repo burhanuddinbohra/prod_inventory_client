@@ -15,7 +15,7 @@ function ProductItem({ product }) {
         return;
       }
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/user", {
+        const res = await axios.get(`${import.meta.env.VITE_API_URI}/api/auth/user`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -34,7 +34,7 @@ function ProductItem({ product }) {
   const handleDelete = async () => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/api/products/${product._id}`, {
+      await axios.delete(`${import.meta.env.VITE_API_URI}/api/products/${product._id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

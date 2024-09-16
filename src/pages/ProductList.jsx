@@ -10,7 +10,7 @@ function ProductList() {
   const [totalStock, setTotalStock] = useState(0); // State to store total stock
   const [currentPage, setCurrentPage] = useState(0); // Page index starts from 0
   const productsPerPage = 2;
-
+  console.log(import.meta.env.VITE_API_URI, "<<< api");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function ProductList() {
           : {}; // No headers if no token
 
         const res = await axios.get(
-          "http://localhost:5000/api/products",
+          `${import.meta.env.VITE_API_URI}/api/products`,
           config
         );
         setProducts(res.data);

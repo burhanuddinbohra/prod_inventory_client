@@ -16,7 +16,7 @@ function ProductForm() {
     if (id) {
       // If there's an ID, fetch the product details for editing
       axios
-        .get(`http://localhost:5000/api/products/${id}`)
+        .get(`${import.meta.env.VITE_API_URI}/api/products/${id}`)
         .then((res) => {
           const product = res.data;
           setName(product.name);
@@ -39,7 +39,7 @@ function ProductForm() {
       if (id) {
         // If we have an ID, it's an update operation
         await axios.put(
-          `http://localhost:5000/api/products/${id}`,
+          `${import.meta.env.VITE_API_URI}/api/products/${id}`,
           { name, price, description, category, stock },
           {
             headers: {
@@ -51,7 +51,7 @@ function ProductForm() {
       } else {
         // Else, it's an add operation
         await axios.post(
-          "http://localhost:5000/api/products",
+          `${import.meta.env.VITE_API_URI}/api/products`,
           { name, price, description, category, stock },
           {
             headers: {
