@@ -68,7 +68,6 @@ const Register = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            
           />
         </div>
         <div className="mb-4">
@@ -84,7 +83,6 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            
           />
         </div>
         <div className="mb-4">
@@ -100,14 +98,27 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            
           />
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white p-3 rounded-md hover:bg-green-600 duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          Register
+          <span>Register</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
+            />
+          </svg>
         </button>
       </form>
     </div>
