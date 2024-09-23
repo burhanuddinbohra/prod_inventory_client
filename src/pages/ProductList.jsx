@@ -59,7 +59,8 @@ function ProductList() {
     setCurrentPage(selected);
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading)
+    return <div className="flex justify-center animate-pulse">Loading...</div>;
 
   return (
     <div className="max-w-4xl mx-auto">

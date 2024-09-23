@@ -85,7 +85,7 @@ function Navbar() {
       {/* Right section with Login/Register or User Info/Logout */}
       <div className="flex items-center space-x-4">
         {loading ? (
-          <p>Loading...</p>
+          <div className="flex justify-center animate-pulse">Loading...</div>
         ) : user ? (
           <>
             <span>{user.username || user.email}</span>

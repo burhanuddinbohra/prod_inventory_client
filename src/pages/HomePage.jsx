@@ -14,7 +14,9 @@ const HomePage = () => {
     // Fetch all products
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URI}/api/products`);
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URI}/api/products`
+        );
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products", error);
@@ -51,7 +53,7 @@ const HomePage = () => {
 
   // Show loading state while fetching products
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="flex justify-center animate-pulse">Loading...</div>;
   }
 
   return (
