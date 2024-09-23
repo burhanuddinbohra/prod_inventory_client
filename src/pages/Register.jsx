@@ -104,7 +104,6 @@ const Register = () => {
           type="submit"
           className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white p-3 rounded-md hover:bg-green-600 duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <span>Register</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -119,6 +118,7 @@ const Register = () => {
               d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
             />
           </svg>
+          <span>Register</span>
         </button>
       </form>
     </div>
